@@ -15,7 +15,7 @@ function App(): JSX.Element {
             Coffstack
           </Text>
           <Box marginBottom="s24">
-            <Button title="Enviar" />
+            <Button title="Enviar" mt="s12" />
           </Box>
           <Button title="Enviar" loading />
         </View>

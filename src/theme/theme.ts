@@ -54,7 +54,12 @@ export const theme = createTheme({
     s56: 56,
   },
   borderRadii: {
+    br8: 8,
+    br12: 12,
     br16: 16,
+  },
+  textVariants: {
+    defaults: {},
   },
 });
 
