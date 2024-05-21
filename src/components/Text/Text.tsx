@@ -4,6 +4,7 @@ import {createText} from '@shopify/restyle';
 import {Theme} from '../../theme/theme';
 
 const SRText = createText<Theme>();
+/* React.ComponentProps é uma interface utilitária que pega as propriedades de um componente */
 export type SRTextProps = React.ComponentProps<typeof SRText>;
 
 interface TextProps extends SRTextProps {
