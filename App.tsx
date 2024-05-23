@@ -18,9 +18,9 @@ function App(): JSX.Element {
             <Button title="Enviar" mt="s12" />
           </Box>
           <Box marginBottom="s24">
-            <Button preset="outline" title="Outline" mt="s12" />
+            <Button loading preset="outline" title="Outline" mt="s12" />
           </Box>
-          <Button title="Enviar" loading />
+          <Button loading title="Enviar" />
         </View>
       </SafeAreaView>
     </ThemeProvider>

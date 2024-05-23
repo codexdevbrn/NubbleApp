@@ -7,15 +7,41 @@ export interface ButtonUI {
   content: ThemeColors;
 }
 
-export const buttonPresets: Record<ButtonPreset, ButtonUI> = {
+export const buttonPresets: Record<
+  ButtonPreset,
+  {
+    default: ButtonUI;
+    disabled: ButtonUI;
+  }
+> = {
   primary: {
-    container: {
-      backgroundColor: 'primary',
+    default: {
+      container: {
+        backgroundColor: 'primary',
+      },
+      content: 'primaryContrast',
     },
-    content: 'primaryContrast',
+    disabled: {
+      container: {
+        backgroundColor: 'gray4',
+      },
+      content: 'gray2',
+    },
   },
   outline: {
-    container: {borderColor: 'primary', borderWidth: 1},
-    content: 'primary',
+    default: {
+      container: {
+        borderColor: 'primary',
+        borderWidth: 1,
+      },
+      content: 'primary',
+    },
+    disabled: {
+      container: {
+        borderWidth: 1,
+        borderColor: 'gray4',
+      },
+      content: 'gray2',
+    },
   },
 };
