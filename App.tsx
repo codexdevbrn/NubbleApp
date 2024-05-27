@@ -5,6 +5,7 @@ import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme/theme';
 import {Button} from './src/components/Button/Button';
 import {Box} from './src/components/Box/Box';
+import {EyeOffIcon} from './src/assets/icons/EyeOffIcon';
 
 function App(): JSX.Element {
   return (
@@ -16,6 +17,7 @@ function App(): JSX.Element {
           </Text>
           <Box marginBottom="s24">
             <Button title="Enviar" mt="s12" />
+            <EyeOffIcon />
           </Box>
           <Box marginBottom="s24">
             <Button loading preset="outline" title="Outline" mt="s12" />
