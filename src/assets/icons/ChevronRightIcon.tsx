@@ -1,12 +1,13 @@
 import React from 'react';
 import {Svg, Path} from 'react-native-svg';
+import {IconBases} from '../../components/Icon/Icon';
 
-export function ChevronRightIcon() {
+export function ChevronRightIcon({size = 20, color = 'primary'}: IconBases) {
   return (
-    <Svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <Svg width={size} height={size} viewBox="0 0 20 20" fill="none">
       <Path
         d="M7 4L14 10L7 16"
-        stroke="black"
+        stroke={color}
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
