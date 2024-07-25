@@ -4,6 +4,7 @@ import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme/theme';
 import {Button} from './src/components/Button/Button';
 import {Box} from './src/components/Box/Box';
+import {Icon} from './src/components/Icon/Icon';
 
 function App(): JSX.Element {
   return (
@@ -17,6 +18,7 @@ function App(): JSX.Element {
             <Button loading preset="outline" title="Outline" mt="s12" />
           </Box>
           <Button loading title="Enviar" />
+          <Icon name="eyeOn" color="error" />
         </View>
       </SafeAreaView>
     </ThemeProvider>
