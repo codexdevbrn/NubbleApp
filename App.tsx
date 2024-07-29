@@ -2,27 +2,31 @@ import React from 'react';
 import {SafeAreaView, View} from 'react-native';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme/theme';
-import {Button} from './src/components/Button/Button';
+import {Text} from './src/components/Text/Text';
+import {TextInput} from './src/components/TextInput/TextInput';
 import {Box} from './src/components/Box/Box';
-import {Icon} from './src/components/Icon/Icon';
 
 function App(): JSX.Element {
-  return (
-    <ThemeProvider theme={theme}>
-      <SafeAreaView>
-        <View style={{paddingHorizontal: 14}}>
-          <Box marginBottom="s24">
-            <Button title="Enviar" mt="s12" />
-          </Box>
-          <Box marginBottom="s24">
-            <Button loading preset="outline" title="Outline" mt="s12" />
-          </Box>
-          <Button loading title="Enviar" />
-          <Icon name="eyeOn" color="error" />
-        </View>
-      </SafeAreaView>
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <SafeAreaView>
+                <View style={{paddingHorizontal: 14}}>
+                    <Text preset="headingLarge" bold mb="s8" mt="s12">
+                        Olá!
+                    </Text>
+                    <Text preset="paragraphLarge" mb="s40">
+                        Digite seu e-mail e senha para entrar
+                    </Text>
+                    <Box>
+                        <TextInput
+                            label="E-mail"
+                            placeholder="Digite sua senha"
+                        />
+                    </Box>
+                </View>
+            </SafeAreaView>
+        </ThemeProvider>
+    );
 }
 
 export default App;

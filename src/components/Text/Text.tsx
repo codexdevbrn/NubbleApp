@@ -24,7 +24,6 @@ export function Text({
     ...sRTextProps
 }: TextProps) {
     const fontFamily = getFontFamily(bold, italic, semiBold);
-
     return (
         /* merge entre o fontSize preset e o style nativo */
         <SRText
