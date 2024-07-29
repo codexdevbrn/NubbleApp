@@ -3,7 +3,7 @@ import {
     TextInput as RNTextInput,
     TextInputProps as RNTextInputProps,
 } from 'react-native';
-import {Box} from '../Box/Box';
+import {Box, BoxProps} from '../Box/Box';
 import {Text} from '../Text/Text';
 
 interface TextInputProps extends RNTextInputProps {
@@ -16,10 +16,16 @@ export function TextInput({label, ...rnTextInputProps}: TextInputProps) {
             <Text preset="paragraphMedium" mb="s4">
                 {label}
             </Text>
-            <RNTextInput
-                style={{borderWidth: 1, height: 50}}
-                {...rnTextInputProps}
-            />
+            <Box {...$textInputContainer}>
+                <RNTextInput {...rnTextInputProps} />
+            </Box>
         </Box>
     );
 }
+
+const $textInputContainer: BoxProps = {
+    borderWidth: 1,
+    padding: 's16',
+    borderColor: 'gray4',
+    borderRadius: 'br12',
+};

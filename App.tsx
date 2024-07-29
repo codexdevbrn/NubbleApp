@@ -5,6 +5,7 @@ import {theme} from './src/theme/theme';
 import {Text} from './src/components/Text/Text';
 import {TextInput} from './src/components/TextInput/TextInput';
 import {Box} from './src/components/Box/Box';
+import {Button} from './src/components/Button/Button';
 
 function App(): JSX.Element {
     return (
@@ -22,7 +23,30 @@ function App(): JSX.Element {
                             label="E-mail"
                             placeholder="Digite sua senha"
                         />
+                        <TextInput
+                            label="Senha"
+                            placeholder="Digite sua senha"
+                        />
                     </Box>
+                    <Text
+                        preset="paragraphSmall"
+                        color="buttonPrimary"
+                        mt="s8"
+                        bold>
+                        Esqueceu sua senha?
+                    </Text>
+                    <Button
+                        title="Entrar"
+                        backgroundColor="buttonPrimary"
+                        mt="s48"
+                    />
+                    <Button
+                        title="Criar uma nova conta"
+                        backgroundColor="background"
+                        mt="s12"
+                        preset="outline"
+                        borderColor="buttonPrimary"
+                    />
                 </View>
             </SafeAreaView>
         </ThemeProvider>
