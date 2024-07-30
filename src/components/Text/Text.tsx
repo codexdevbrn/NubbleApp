@@ -63,7 +63,7 @@ type TextVariants =
 
 /* Record - cria um map entre duas interfaces, a primeira define
 a chave do objeto e a segunda o valor do objeto que vem do TextStyle do React Native */
-const $fontSizes: Record<TextVariants, TextStyle> = {
+export const $fontSizes: Record<TextVariants, TextStyle> = {
     headingLarge: {fontSize: 32, lineHeight: 38.4},
     headingMedium: {fontSize: 22, lineHeight: 26.4},
     headingSmall: {fontSize: 18, lineHeight: 23.4},
@@ -76,7 +76,7 @@ const $fontSizes: Record<TextVariants, TextStyle> = {
     paragraphCaptionSmall: {fontSize: 10, lineHeight: 14},
 };
 
-const $fontFamily = {
+export const $fontFamily = {
     bold: 'Satoshi-Bold',
     semiBold: 'Satoshi-Medium',
     regular: 'Satoshi-Regular',

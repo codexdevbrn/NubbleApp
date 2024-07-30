@@ -15,7 +15,10 @@ function App(): JSX.Element {
                     <Text preset="headingLarge" bold mb="s8" mt="s12">
                         Olá!
                     </Text>
-                    <Text preset="paragraphLarge" mb="s40">
+                    <Text
+                        preset="paragraphLarge"
+                        mb="s40"
+                        color="backgroundContrast">
                         Digite seu e-mail e senha para entrar
                     </Text>
                     <Box>
@@ -24,6 +27,7 @@ function App(): JSX.Element {
                             placeholder="Digite sua senha"
                         />
                         <TextInput
+                            preset="password"
                             label="Senha"
                             placeholder="Digite sua senha"
                         />
