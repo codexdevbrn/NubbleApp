@@ -6,6 +6,7 @@ import {Text} from './src/components/Text/Text';
 import {TextInput} from './src/components/TextInput/TextInput';
 import {Box} from './src/components/Box/Box';
 import {Button} from './src/components/Button/Button';
+import {Icon} from './src/components/Icon/Icon';
 
 function App(): JSX.Element {
     return (
@@ -23,10 +24,12 @@ function App(): JSX.Element {
                     </Text>
                     <Box>
                         <TextInput
+                            boxProps={{mb: 's20'}}
                             label="E-mail"
                             placeholder="Digite sua senha"
                         />
                         <TextInput
+                            RightComponent={<Icon name="eyeOn" color="gray2" />}
                             preset="password"
                             label="Senha"
                             placeholder="Digite sua senha"
