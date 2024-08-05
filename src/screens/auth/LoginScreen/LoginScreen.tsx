@@ -1,5 +1,3 @@
-import React from 'react';
-import {SafeAreaView} from 'react-native';
 import {Text} from '../../../components/Text/Text';
 import {Box} from '../../../components/Box/Box';
 import {TextInput} from '../../../components/TextInput/TextInput';
