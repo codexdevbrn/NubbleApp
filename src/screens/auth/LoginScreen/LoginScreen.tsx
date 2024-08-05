@@ -9,48 +9,32 @@ import {PasswordInput} from '../../../components/PasswordInput/PasswordInput';
 
 export function LoginScreen() {
     return (
-        <SafeAreaView>
-            <Screen>
-                <Text preset="headingLarge" bold mb="s8" mt="s12">
-                    Olá!
-                </Text>
-                <Text
-                    preset="paragraphLarge"
-                    mb="s40"
-                    color="backgroundContrast">
-                    Digite seu e-mail e senha para entrar
-                </Text>
-                <Box>
-                    <TextInput
-                        boxProps={{mb: 's20'}}
-                        label="E-mail"
-                        placeholder="Digite sua senha"
-                    />
-                    <PasswordInput
-                        label="Senha"
-                        placeholder="Digite sua senha"
-                    />
-                </Box>
-                <Text
-                    preset="paragraphSmall"
-                    color="buttonPrimary"
-                    mt="s8"
-                    bold>
-                    Esqueceu sua senha?
-                </Text>
-                <Button
-                    title="Entrar"
-                    backgroundColor="buttonPrimary"
-                    mt="s48"
+        <Screen scrollable>
+            <Text preset="headingLarge" bold mb="s8" mt="s12">
+                Olá!
+            </Text>
+            <Text preset="paragraphLarge" mb="s40" color="backgroundContrast">
+                Digite seu e-mail e senha para entrar
+            </Text>
+            <Box>
+                <TextInput
+                    boxProps={{mb: 's20'}}
+                    label="E-mail"
+                    placeholder="Digite sua senha"
                 />
-                <Button
-                    title="Criar uma nova conta"
-                    backgroundColor="background"
-                    mt="s12"
-                    preset="outline"
-                    borderColor="buttonPrimary"
-                />
-            </Screen>
-        </SafeAreaView>
+                <PasswordInput label="Senha" placeholder="Digite sua senha" />
+            </Box>
+            <Text preset="paragraphSmall" color="buttonPrimary" mt="s8" bold>
+                Esqueceu sua senha?
+            </Text>
+            <Button title="Entrar" backgroundColor="buttonPrimary" mt="s48" />
+            <Button
+                title="Criar uma nova conta"
+                backgroundColor="background"
+                mt="s12"
+                preset="outline"
+                borderColor="buttonPrimary"
+            />
+        </Screen>
     );
 }
