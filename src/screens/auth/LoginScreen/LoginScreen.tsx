@@ -3,9 +3,9 @@ import {SafeAreaView} from 'react-native';
 import {Text} from '../../../components/Text/Text';
 import {Box} from '../../../components/Box/Box';
 import {TextInput} from '../../../components/TextInput/TextInput';
-import {Icon} from '../../../components/Icon/Icon';
 import {Button} from '../../../components/Button/Button';
 import {Screen} from '../../../components/Screen/Screen';
+import {PasswordInput} from '../../../components/PasswordInput/PasswordInput';
 
 export function LoginScreen() {
     return (
@@ -26,9 +26,7 @@ export function LoginScreen() {
                         label="E-mail"
                         placeholder="Digite sua senha"
                     />
-                    <TextInput
-                        RightComponent={<Icon name="eyeOn" color="gray2" />}
-                        preset="password"
+                    <PasswordInput
                         label="Senha"
                         placeholder="Digite sua senha"
                     />

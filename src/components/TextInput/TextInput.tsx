@@ -9,22 +9,18 @@ import {Box, BoxProps} from '../Box/Box';
 import {$fontSizes, $fontFamily, Text} from '../Text/Text';
 import {useAppTheme} from '../../hooks/useAppTheme';
 
-export type InputPreset = 'password';
-
-interface TextInputProps extends RNTextInputProps {
+export interface TextInputProps extends RNTextInputProps {
     label: string;
     errorMessage?: string;
-    preset?: InputPreset;
     boxProps?: BoxProps;
     RightComponent?: React.ReactElement;
 }
 
 export function TextInput({
-    preset,
     label,
     errorMessage,
-    RightComponent,
     boxProps,
+    RightComponent,
     ...rnTextInputProps
 }: TextInputProps) {
     const {colors} = useAppTheme();
@@ -52,23 +48,14 @@ export function TextInput({
             </Text>
             <Pressable onPress={focusInput}>
                 <Box {...$textInputContainer}>
-                    {preset ? (
-                        <RNTextInput
-                            ref={inputRef}
-                            placeholderTextColor={colors.gray2}
-                            style={{...$textInputStyle}}
-                            {...rnTextInputProps}
-                            secureTextEntry
-                            {...rnTextInputProps}
-                        />
-                    ) : (
-                        <RNTextInput
-                            style={{...$textInputStyle}}
-                            {...rnTextInputProps}
-                        />
-                    )}
+                    <RNTextInput
+                        ref={inputRef}
+                        {...rnTextInputProps}
+                        placeholderTextColor={colors.gray2}
+                        style={{...$textInputStyle}}
+                    />
                     {RightComponent && (
-                        <Box ml="s16" justifyContent="center">
+                        <Box justifyContent="center" ml="s16">
                             {RightComponent}
                         </Box>
                     )}
