@@ -5,8 +5,9 @@
 ## Tecnologias utlizadas - até agora
 - [React](https://react.dev/)
 - [React Native](https://reactnative.dev/)
-- [Shopfy Restyle- Construção de componentes](https://shopify.github.io/restyle/)
+- [Shopify Restyle- Construção de componentes](https://shopify.github.io/restyle/)
 - [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
+- [React Navigation](https://reactnavigation.org/)
 
 
 # Como inicializar o projeto
