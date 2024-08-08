@@ -2,6 +2,8 @@
 
 <p>Aplicação criada do zero até a publicação, seguindo a mentoria de <a href='https://github.com/LucasGarcez' target='_blank'>@LucasGarcez</a> no curso <a href='https://coffstack.com.br/' target='_blank'>Profissional React Native</a>. Tem como objetivo por na prática como é feito o desenvolvimento com React Native diretamente de sua CLI. Utilizando técnicas condizentes com o mercado, este é um app que engloba tudo que um desenvolvedor profissional precisa para uma carreira sólida. O app é uma alusão ao Instagram.</p>
 
+- [Figma](https://www.figma.com/design/qZVdIhrBpXhyZCPhy1WfAh/App---Nubble-(v.1.1)?node-id=0-1&t=UCqKWIqt6mvrfYjk-0)
+
 ## Tecnologias utlizadas - até agora
 - [React](https://react.dev/)
 - [React Native](https://reactnative.dev/)
