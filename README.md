@@ -1,13 +1,15 @@
 # NubbleApp - Coffstack
 
-<p>Aplicação criada do zero até a publicação, seguindo a mentoria de <a href='https://github.com/LucasGarcez' target='_blank'>@LucasGarcez</a>. Tem como objetivo por na prática como é feito o desenvolvimento com React Native diretamente de sua CLI. Utilizando técnicas condizentes com o mercado, este é um app que engloba tudo que um desenvolvedor profissional precisa para uma carreira sólida. O app é uma alusão ao Instagram.</p>
+<p>Aplicação criada do zero até a publicação, seguindo a mentoria de <a href='https://github.com/LucasGarcez' target='_blank'>@LucasGarcez</a> no curso <a href='https://coffstack.com.br/' target='_blank'>Profissional React Native</a>. Tem como objetivo por na prática como é feito o desenvolvimento com React Native diretamente de sua CLI. Utilizando técnicas condizentes com o mercado, este é um app que engloba tudo que um desenvolvedor profissional precisa para uma carreira sólida. O app é uma alusão ao Instagram.</p>
 
 ## Tecnologias utlizadas - até agora
 - [React](https://react.dev/)
 - [React Native](https://reactnative.dev/)
-- [Shopify Restyle- Construção de componentes](https://shopify.github.io/restyle/)
-- [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
 - [React Navigation](https://reactnavigation.org/)
+- [Shopify Restyle](https://shopify.github.io/restyle/)
+- [react-native-svg](https://github.com/software-mansion/react-native-svg)
+- [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
+
 
 
 # Como inicializar o projeto

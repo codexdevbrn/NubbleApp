@@ -10,7 +10,7 @@ export function SuccessScreen() {
     }
     return (
         <Screen>
-            <Icon name="bellOn" />
+            <Icon name="checkRound" color="success" />
             <Text preset="headingLarge" bold mt="s24">
                 Title
             </Text>

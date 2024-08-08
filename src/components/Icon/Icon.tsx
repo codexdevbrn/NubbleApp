@@ -1,4 +1,7 @@
 import React from 'react';
+import {Pressable} from 'react-native';
+
+import {ErrorRoundIcon} from '../../assets/icons/ErrorRoundIcon';
 import {EyeOnIcon} from '../../assets/icons/EyeOnIcon';
 import {EyeOffIcon} from '../../assets/icons/EyeOffIcon';
 import {ThemeColors} from '../../theme/theme';
@@ -13,6 +16,7 @@ import {CameraIcon} from '../../assets/icons/CameraIcon';
 import {ChatIcon} from '../../assets/icons/ChatIcon';
 import {ChatOnIcon} from '../../assets/icons/ChatOnIcon';
 import {CheckIcon} from '../../assets/icons/CheckIcon';
+import {CheckRoundIcon} from '../../assets/icons/CheckRoundIcon';
 import {CommentIcon} from '../../assets/icons/CommentIcon';
 import {ChevronRightIcon} from '../../assets/icons/ChevronRightIcon';
 import {FlashOnIcon} from '../../assets/icons/FlashOnIcon';
@@ -22,13 +26,14 @@ import {HeartFillIcon} from '../../assets/icons/HeartFillIcon';
 import {HomeIcon} from '../../assets/icons/HomeIcon';
 import {HomeFillIcon} from '../../assets/icons/HomeFIllIcon';
 import {MessageIcon} from '../../assets/icons/MessageIcon';
+import {MessageRoundIcon} from '../../assets/icons/MessageRoundIcon';
+import {MessageRoundLightIcon} from '../../assets/icons/MessageRoundLightIcon';
 import {NewPostIcon} from '../../assets/icons/NewPostIcon';
 import {ProfileIcon} from '../../assets/icons/ProfileIcon';
 import {ProfileFillIcon} from '../../assets/icons/ProfileFillIcon';
 import {SearchIcon} from '../../assets/icons/SearchIcon';
 import {SettingsIcon} from '../../assets/icons/SettingsIcon';
 import {TrashIcon} from '../../assets/icons/TrashIcon';
-import {Pressable} from 'react-native';
 
 export interface IconBases {
     size?: number;
@@ -74,6 +79,8 @@ const iconRegistry = {
     check: CheckIcon,
     comment: CommentIcon,
     chevronRight: ChevronRightIcon,
+    checkRound: CheckRoundIcon,
+    errorRound: ErrorRoundIcon,
     eyeOn: EyeOnIcon,
     eyeOff: EyeOffIcon,
     flashOn: FlashOnIcon,
@@ -83,6 +90,8 @@ const iconRegistry = {
     home: HomeIcon,
     homeFill: HomeFillIcon,
     message: MessageIcon,
+    messageRoundLight: MessageRoundLightIcon,
+    messageRound: MessageRoundIcon,
     newPost: NewPostIcon,
     profile: ProfileIcon,
     profileFill: ProfileFillIcon,
