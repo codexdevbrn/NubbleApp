@@ -4,14 +4,21 @@ import {Text} from '../../../components/Text/Text';
 import {TextInput} from '../../../components/TextInput/TextInput';
 import {Button} from '../../../components/Button/Button';
 import {PasswordInput} from '../../../components/PasswordInput/PasswordInput';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../../routes/Router';
 
-type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'>;
+import {successPresets} from '../SuccessScreen/SuccessScreenPresets';
+import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSuccess';
 
-export function SignUpScreen({navigation}: ScreenProps) {
+export function SignUpScreen() {
+    const {reset} = useResetNavigationSuccess();
     function submitForm() {
-        navigation.navigate('SuccessScreen');
+        reset({
+            title: successPresets.success.ScreenPresets.title,
+            subtitle: successPresets.success.ScreenPresets.subtitle,
+            icon: {
+                name: successPresets.success.ScreenPresets.icon.name,
+                color: successPresets.success.ScreenPresets.icon.color,
+            },
+        });
     }
     return (
         <Screen canGoBack scrollable>
