@@ -6,8 +6,8 @@ import {Screen} from '../../../components/Screen/Screen';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../../routes/Router';
 import {Alert} from 'react-native';
-import {FormTextInput} from '../../../components/FormTextInput/FormTextInput';
-import {FormPasswordInput} from '../../../components/FormPasswordInput/FormPasswordInput';
+import {FormTextInput} from '../../../components/Form/FormTextInput';
+import {FormPasswordInput} from '../../../components/Form/FormPasswordInput';
 
 type LoginFormType = {
     email: string;

@@ -4,11 +4,12 @@
 
 - [Figma](https://www.figma.com/design/qZVdIhrBpXhyZCPhy1WfAh/App---Nubble-(v.1.1)?node-id=0-1&t=UCqKWIqt6mvrfYjk-0)
 
-## Tecnologias utlizadas - até agora
+## Tecnologias utlizadas 
 - [React](https://react.dev/)
 - [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
 - [React Hook Form](https://react-hook-form.com/)
+- [Zod](https://zod.dev/)
 - [Shopify Restyle](https://shopify.github.io/restyle/)
 - [react-native-svg](https://github.com/software-mansion/react-native-svg)
 - [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)

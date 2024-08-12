@@ -1,15 +1,28 @@
 import React from 'react';
 import {Screen} from '../../../components/Screen/Screen';
 import {Text} from '../../../components/Text/Text';
-import {TextInput} from '../../../components/TextInput/TextInput';
 import {Button} from '../../../components/Button/Button';
-import {PasswordInput} from '../../../components/PasswordInput/PasswordInput';
+import {zodResolver} from '@hookform/resolvers/zod';
 
 import {successPresets} from '../SuccessScreen/SuccessScreenPresets';
 import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSuccess';
+import {useForm} from 'react-hook-form';
+import {FormTextInput} from '../../../components/Form/FormTextInput';
+import {FormPasswordInput} from '../../../components/Form/FormPasswordInput';
+import {signUpSchema, SignUpSchema} from './signUpSchema';
 
 export function SignUpScreen() {
     const {reset} = useResetNavigationSuccess();
+    const {control, formState, handleSubmit} = useForm<SignUpSchema>({
+        resolver: zodResolver(signUpSchema),
+        defaultValues: {
+            username: '',
+            fullName: '',
+            email: '',
+            password: '',
+        },
+        mode: 'onBlur',
+    });
     function submitForm() {
         //Hook
         reset({
@@ -26,27 +39,46 @@ export function SignUpScreen() {
             <Text preset="headingLarge" mb="s32" bold>
                 Crie uma conta
             </Text>
-            <TextInput
+            <FormTextInput
+                control={control}
+                name="username"
                 label="Seu username"
                 placeholder="@"
                 boxProps={{mb: 's20'}}
             />
-            <TextInput
+            <FormTextInput
+                autoCapitalize="words"
+                control={control}
+                name="fullName"
                 label="Nome completo"
                 placeholder="Digite seu nome completo"
                 boxProps={{mb: 's20'}}
             />
-            <TextInput
+            <FormTextInput
+                autoCapitalize="words"
+                control={control}
+                name="email"
                 label="E-mail"
                 placeholder="Digite seu e-mail"
+                rules={{
+                    required: 'E-mail obrigatório',
+                }}
                 boxProps={{mb: 's20'}}
             />
-            <PasswordInput
+            <FormPasswordInput
+                control={control}
+                name="password"
                 label="Senha"
-                boxProps={{mb: 's48'}}
                 placeholder="Digite sua senha"
+                rules={{
+                    required: 'Senha obrigatória',
+                }}
             />
-            <Button title="Criar uma conta" onPress={submitForm} />
+            <Button
+                disabled={!formState.isValid}
+                title="Criar uma conta"
+                onPress={handleSubmit(submitForm)}
+            />
         </Screen>
     );
 }
