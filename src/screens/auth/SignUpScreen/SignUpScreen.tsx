@@ -11,6 +11,7 @@ import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSucces
 export function SignUpScreen() {
     const {reset} = useResetNavigationSuccess();
     function submitForm() {
+        //Hook
         reset({
             title: successPresets.success.ScreenPresets.title,
             subtitle: successPresets.success.ScreenPresets.subtitle,

@@ -9,6 +9,7 @@ import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSucces
 export function ForgotPassword() {
     const {reset} = useResetNavigationSuccess();
     function sendRequest() {
+        //Hook
         reset({
             title: successPresets.sendInstructions.ScreenPresets.title,
             subtitle: successPresets.sendInstructions.ScreenPresets.subtitle,

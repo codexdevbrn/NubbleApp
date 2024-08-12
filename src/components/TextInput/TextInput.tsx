@@ -49,6 +49,7 @@ export function TextInput({
             <Pressable onPress={focusInput}>
                 <Box {...$textInputContainer}>
                     <RNTextInput
+                        autoCapitalize="none"
                         ref={inputRef}
                         {...rnTextInputProps}
                         placeholderTextColor={colors.gray2}

@@ -8,6 +8,7 @@
 - [React](https://react.dev/)
 - [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
+- [React Hook Form](https://react-hook-form.com/)
 - [Shopify Restyle](https://shopify.github.io/restyle/)
 - [react-native-svg](https://github.com/software-mansion/react-native-svg)
 - [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
