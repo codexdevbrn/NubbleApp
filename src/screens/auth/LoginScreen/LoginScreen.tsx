@@ -8,11 +8,9 @@ import {RootStackParamList} from '../../../routes/Router';
 import {Alert} from 'react-native';
 import {FormTextInput} from '../../../components/Form/FormTextInput';
 import {FormPasswordInput} from '../../../components/Form/FormPasswordInput';
+import {loginSchema, LoginSchema} from './loginSchema';
+import {zodResolver} from '@hookform/resolvers/zod';
 
-type LoginFormType = {
-    email: string;
-    password: string;
-};
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
 
 export function LoginScreen({navigation}: ScreenProps) {
@@ -24,7 +22,8 @@ export function LoginScreen({navigation}: ScreenProps) {
         return navigation.navigate('ForgotPassword');
     }
 
-    const {control, formState, handleSubmit} = useForm<LoginFormType>({
+    const {control, formState, handleSubmit} = useForm<LoginSchema>({
+        resolver: zodResolver(loginSchema),
         defaultValues: {
             email: '',
             password: '',
@@ -32,7 +31,7 @@ export function LoginScreen({navigation}: ScreenProps) {
         mode: 'onBlur',
     });
 
-    function submitForm({email, password}: LoginFormType) {
+    function submitForm({email, password}: LoginSchema) {
         Alert.alert(`Email: ${email} / Senha: ${password}`);
     }
 
@@ -44,31 +43,13 @@ export function LoginScreen({navigation}: ScreenProps) {
             <Text preset="paragraphLarge" mb="s40" color="backgroundContrast">
                 Digite seu e-mail e senha para entrar
             </Text>
-            <FormTextInput
-                control={control}
-                name="email"
-                label="E-mail"
-                rules={{
-                    required: 'E-mail obrigatório',
-                    pattern: {
-                        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-                        message: 'E-mail inválido',
-                    },
-                }}
-            />
+            <FormTextInput control={control} name="email" label="E-mail" />
             <FormPasswordInput
                 control={control}
                 name="password"
                 label="Senha"
                 placeholder="Digite sua senha"
                 boxProps={{mb: 's20'}}
-                rules={{
-                    required: 'Senha obrigatória',
-                    minLength: {
-                        value: 8,
-                        message: 'Senha deve ter no mínimo 8 caracteres',
-                    },
-                }}
             />
             {/* TODO: Refactor press request password */}
             <Text
