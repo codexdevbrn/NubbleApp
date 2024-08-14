@@ -1,10 +1,7 @@
 import React from 'react';
-import {Screen} from '../../../components/Screen/Screen';
-import {Text} from '../../../components/Text/Text';
-import {Button} from '../../../components/Button/Button';
-import {successPresets} from '../SuccessScreen/SuccessScreenPresets';
-import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSuccess';
-import {FormTextInput} from '../../../components/Form/FormTextInput';
+import {Text, Button, Screen, FormTextInput} from '@components/index';
+import {successPresets} from '@screens/index';
+import {useResetNavigationSuccess} from '@hooks/index';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {

@@ -1,39 +1,41 @@
 import React from 'react';
 import {Pressable} from 'react-native';
+import {ThemeColors} from '@theme/index';
+import {useAppTheme} from '@hooks/index';
 
-import {ErrorRoundIcon} from '../../assets/icons/ErrorRoundIcon';
-import {EyeOnIcon} from '../../assets/icons/EyeOnIcon';
-import {EyeOffIcon} from '../../assets/icons/EyeOffIcon';
-import {ThemeColors} from '../../theme/theme';
-import {useAppTheme} from '../../hooks/useAppTheme';
-import {ArrowLeftIcon} from '../../assets/icons/ArrowLeftIcon';
-import {ArrowRightIcon} from '../../assets/icons/ArrowRightIcon';
-import {BellIcon} from '../../assets/icons/BellIcon';
-import {BellOnIcon} from '../../assets/icons/BellOnIcon';
-import {BookmarkIcon} from '../../assets/icons/BookmarkIcon';
-import {BookmarkFillIcon} from '../../assets/icons/BookmarkFillIcon';
-import {CameraIcon} from '../../assets/icons/CameraIcon';
-import {ChatIcon} from '../../assets/icons/ChatIcon';
-import {ChatOnIcon} from '../../assets/icons/ChatOnIcon';
-import {CheckIcon} from '../../assets/icons/CheckIcon';
-import {CheckRoundIcon} from '../../assets/icons/CheckRoundIcon';
-import {CommentIcon} from '../../assets/icons/CommentIcon';
-import {ChevronRightIcon} from '../../assets/icons/ChevronRightIcon';
-import {FlashOnIcon} from '../../assets/icons/FlashOnIcon';
-import {FlashOffIcon} from '../../assets/icons/FlashOffIcon';
-import {HeartIcon} from '../../assets/icons/HeartIcon';
-import {HeartFillIcon} from '../../assets/icons/HeartFillIcon';
-import {HomeIcon} from '../../assets/icons/HomeIcon';
-import {HomeFillIcon} from '../../assets/icons/HomeFIllIcon';
-import {MessageIcon} from '../../assets/icons/MessageIcon';
-import {MessageRoundIcon} from '../../assets/icons/MessageRoundIcon';
-import {MessageRoundLightIcon} from '../../assets/icons/MessageRoundLightIcon';
-import {NewPostIcon} from '../../assets/icons/NewPostIcon';
-import {ProfileIcon} from '../../assets/icons/ProfileIcon';
-import {ProfileFillIcon} from '../../assets/icons/ProfileFillIcon';
-import {SearchIcon} from '../../assets/icons/SearchIcon';
-import {SettingsIcon} from '../../assets/icons/SettingsIcon';
-import {TrashIcon} from '../../assets/icons/TrashIcon';
+import {
+    ErrorRoundIcon,
+    ArrowLeftIcon,
+    BellIcon,
+    ArrowRightIcon,
+    BellOnIcon,
+    BookmarkFillIcon,
+    BookmarkIcon,
+    CameraIcon,
+    ChatIcon,
+    ChatOnIcon,
+    CommentIcon,
+    ChevronRightIcon,
+    CheckRoundIcon,
+    EyeOnIcon,
+    EyeOffIcon,
+    FlashOffIcon,
+    HeartIcon,
+    HeartFillIcon,
+    HomeIcon,
+    HomeFillIcon,
+    MessageIcon,
+    MessageRoundLightIcon,
+    MessageRoundIcon,
+    NewPostIcon,
+    ProfileIcon,
+    ProfileFillIcon,
+    SettingsIcon,
+    SearchIcon,
+    TrashIcon,
+} from '@assets/index';
+import {CheckIcon} from '@assets/icons/CheckIcon';
+import {FlashOnIcon} from '@assets/icons/FlashOnIcon';
 
 export interface IconBases {
     size?: number;

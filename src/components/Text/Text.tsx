@@ -1,7 +1,7 @@
 import React from 'react';
 import {TextStyle} from 'react-native';
 import {createText} from '@shopify/restyle';
-import {Theme} from '../../theme/theme';
+import {Theme} from '@theme/index';
 
 const SRText = createText<Theme>();
 /* React.ComponentProps é uma interface utilitária que pega as propriedades de um componente */

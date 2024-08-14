@@ -1,4 +1,4 @@
-import {IconProps} from '../../../components/Icon/Icon';
+import {IconProps} from '@components/index';
 
 export type SuccessPresets = 'success' | 'sendInstructions';
 

@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import {RootStackParamList} from '../routes/Router';
+import {RootStackParamList} from '@routes/index';
 
 export function useResetNavigationSuccess() {
     const navigation = useNavigation();

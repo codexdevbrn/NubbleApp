@@ -1,14 +1,16 @@
 import React from 'react';
-import {Screen} from '../../../components/Screen/Screen';
-import {Text} from '../../../components/Text/Text';
-import {Button} from '../../../components/Button/Button';
-import {zodResolver} from '@hookform/resolvers/zod';
+import {
+    Screen,
+    Text,
+    Button,
+    FormTextInput,
+    FormPasswordInput,
+} from '@components/index';
+import {successPresets} from '@screens/index';
+import {useResetNavigationSuccess} from '@hooks/index';
 
-import {successPresets} from '../SuccessScreen/SuccessScreenPresets';
-import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSuccess';
+import {zodResolver} from '@hookform/resolvers/zod';
 import {useForm} from 'react-hook-form';
-import {FormTextInput} from '../../../components/Form/FormTextInput';
-import {FormPasswordInput} from '../../../components/Form/FormPasswordInput';
 import {signUpSchema, SignUpSchema} from './signUpSchema';
 
 export function SignUpScreen() {
