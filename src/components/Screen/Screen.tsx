@@ -1,4 +1,6 @@
 import React from 'react';
+import {KeyboardAvoidingView, Platform} from 'react-native';
+
 import {
     Box,
     TouchableOpacityBox,
@@ -8,7 +10,6 @@ import {
     ViewContainer,
 } from '@components/index';
 import {useAppSafeArea, useAppTheme} from '@hooks/index';
-import {KeyboardAvoidingView, Platform} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 interface ScreenProps {
@@ -38,15 +39,17 @@ export function Screen({
                     paddingHorizontal="s24"
                     style={{paddingTop: top, paddingBottom: bottom}}>
                     {canGoBack && (
-                        <TouchableOpacityBox
-                            onPress={goBack}
-                            mb="s24"
-                            flexDirection="row">
-                            <Icon name="arrowLeft" color="primary" />
-                            <Text preset="paragraphMedium" semiBold ml="s8">
-                                Voltar
-                            </Text>
-                        </TouchableOpacityBox>
+                        <Box pr="s270">
+                            <TouchableOpacityBox
+                                onPress={goBack}
+                                mb="s24"
+                                flexDirection="row">
+                                <Icon name="arrowLeft" color="primary" />
+                                <Text preset="paragraphMedium" semiBold ml="s8">
+                                    Voltar
+                                </Text>
+                            </TouchableOpacityBox>
+                        </Box>
                     )}
                     {children}
                 </Box>

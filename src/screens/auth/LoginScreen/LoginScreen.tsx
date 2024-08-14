@@ -1,19 +1,20 @@
 import React from 'react';
-import {useForm} from 'react-hook-form';
+import {Alert} from 'react-native';
+
 import {
     Text,
     Button,
     Screen,
     FormTextInput,
     FormPasswordInput,
+    Box,
 } from '@components/index';
-
+import {zodResolver} from '@hookform/resolvers/zod';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@routes/index';
-import {Alert} from 'react-native';
+import {useForm} from 'react-hook-form';
 
 import {loginSchema, LoginSchema} from './loginSchema';
-import {zodResolver} from '@hookform/resolvers/zod';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
 
@@ -55,15 +56,16 @@ export function LoginScreen({navigation}: ScreenProps) {
                 placeholder="Digite sua senha"
                 boxProps={{mb: 's20'}}
             />
-            {/* TODO: Refactor press request password */}
-            <Text
-                onPress={navigateToRequestPasswordScreen}
-                preset="paragraphSmall"
-                color="buttonPrimary"
-                mt="s8"
-                bold>
-                Esqueceu sua senha?
-            </Text>
+            <Box pr="s200">
+                <Text
+                    onPress={navigateToRequestPasswordScreen}
+                    preset="paragraphSmall"
+                    color="buttonPrimary"
+                    mt="s8"
+                    bold>
+                    Esqueceu sua senha?
+                </Text>
+            </Box>
             <Button
                 disabled={!formState.isValid}
                 onPress={handleSubmit(submitForm)}

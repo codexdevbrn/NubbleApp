@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {Screen, Text, Button, Icon} from '@components/index';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '@routes/index';

@@ -1,9 +1,11 @@
 import React from 'react';
+
 import {Text, Button, Screen, FormTextInput} from '@components/index';
-import {successPresets} from '@screens/index';
-import {useResetNavigationSuccess} from '@hooks/index';
-import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {useResetNavigationSuccess} from '@hooks/index';
+import {successPresets} from '@screens/index';
+import {useForm} from 'react-hook-form';
+
 import {
     forgotPasswordSchema,
     ForgotPasswordSchema,

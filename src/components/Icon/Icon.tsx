@@ -1,8 +1,8 @@
 import React from 'react';
 import {Pressable} from 'react-native';
-import {ThemeColors} from '@theme/index';
-import {useAppTheme} from '@hooks/index';
 
+import {CheckIcon} from '@assets/icons/CheckIcon';
+import {FlashOnIcon} from '@assets/icons/FlashOnIcon';
 import {
     ErrorRoundIcon,
     ArrowLeftIcon,
@@ -34,8 +34,8 @@ import {
     SearchIcon,
     TrashIcon,
 } from '@assets/index';
-import {CheckIcon} from '@assets/icons/CheckIcon';
-import {FlashOnIcon} from '@assets/icons/FlashOnIcon';
+import {useAppTheme} from '@hooks/index';
+import {ThemeColors} from '@theme/index';
 
 export interface IconBases {
     size?: number;

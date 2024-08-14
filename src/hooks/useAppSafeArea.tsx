@@ -1,5 +1,5 @@
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useAppTheme} from '@hooks/index';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 export function useAppSafeArea() {
     const {top, bottom} = useSafeAreaInsets();
