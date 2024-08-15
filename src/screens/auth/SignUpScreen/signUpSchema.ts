@@ -1,6 +1,6 @@
 import {z} from 'zod';
 
-const userNameRegex = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0.29}$/gim;
+const userNameRegex = /^[a-zA-Z0-9._]{3,16}$/;
 
 export const signUpSchema = z.object({
     username: z
