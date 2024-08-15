@@ -12,9 +12,6 @@
 - [Zod](https://zod.dev/)
 - [Shopify Restyle](https://shopify.github.io/restyle/)
 - [react-native-svg](https://github.com/software-mansion/react-native-svg)
-- [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
-
-
 
 # Como inicializar o projeto
 
