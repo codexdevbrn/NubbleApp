@@ -12,6 +12,17 @@
 - [Zod](https://zod.dev/)
 - [Shopify Restyle](https://shopify.github.io/restyle/)
 - [react-native-svg](https://github.com/software-mansion/react-native-svg)
+- [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context)
+
+
+# Dependências de desenvolvimento
+
+- [Husky](https://typicode.github.io/husky/)
+
+## Plugins
+
+- [babel-plugin-module-resolver](https://github.com/tleunen/babel-plugin-module-resolver)
+
 
 # Como inicializar o projeto
 

@@ -6,3 +6,6 @@ export * from './auth/SignUpScreen/SignUpScreen';
 export * from './auth/SignUpScreen/signUpSchema';
 export * from './auth/SuccessScreen/SuccessScreen';
 export * from './auth/SuccessScreen/SuccessScreenPresets';
+
+export * from './app/HomeScreen/HomeScreen';
+export * from './app/SettingsScreen/SettingsScreen';
