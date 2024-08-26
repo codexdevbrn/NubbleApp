@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Svg, Path} from 'react-native-svg';
+
 import {IconBases} from '../../components/Icon/Icon';
 
 export function ProfileFillIcon({size = 20, color = 'primary'}: IconBases) {

@@ -73,8 +73,8 @@ const iconRegistry = {
     arrowRight: ArrowRightIcon,
     bell: BellIcon,
     bellOn: BellOnIcon,
-    bookmark: BookmarkIcon,
-    bookmarkFill: BookmarkFillIcon,
+    bookMark: BookmarkIcon,
+    bookMarkFill: BookmarkFillIcon,
     camera: CameraIcon,
     chat: ChatIcon,
     chatOn: ChatOnIcon,
@@ -103,4 +103,4 @@ const iconRegistry = {
 };
 
 type IconType = typeof iconRegistry;
-type IconName = keyof IconType;
+export type IconName = keyof IconType;

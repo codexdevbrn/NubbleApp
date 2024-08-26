@@ -1,10 +1,13 @@
 import React from 'react';
 
+import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeScreen, SettingsScreen} from '@screens/index';
+import {SettingsScreen} from '@screens/index';
+
+import {AppTabNavigator, AppTabNavigatorParamList} from './AppTabNavigator';
 
 export type AppStackParamList = {
-    HomeScreen: undefined;
+    AppTabNavigator: NavigatorScreenParams<AppTabNavigatorParamList>;
     SettingsScreen: undefined;
 };
 
@@ -18,8 +21,8 @@ export function AppStack() {
     return (
         <Stack.Navigator
             screenOptions={screenOptions}
-            initialRouteName="HomeScreen">
-            <Stack.Screen name="HomeScreen" component={HomeScreen} />
+            initialRouteName="AppTabNavigator">
+            <Stack.Screen name="AppTabNavigator" component={AppTabNavigator} />
             <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
         </Stack.Navigator>
     );
