@@ -8,7 +8,7 @@ const SRText = createText<Theme>();
 /* React.ComponentProps é uma interface utilitária que pega as propriedades de um componente */
 export type SRTextProps = React.ComponentProps<typeof SRText>;
 
-interface TextProps extends SRTextProps {
+export interface TextProps extends SRTextProps {
     preset: TextVariants;
     bold?: boolean;
     semiBold?: boolean;
