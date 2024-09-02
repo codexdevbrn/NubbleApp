@@ -62,6 +62,7 @@ export const theme = createTheme({
         br8: 8,
         br12: 12,
         br16: 16,
+        br50: 50,
     },
     textVariants: {
         defaults: {},

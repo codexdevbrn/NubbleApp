@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {AppTabBar} from '@components/index';
 import {
     BottomTabBarProps,
     createBottomTabNavigator,
@@ -11,6 +10,8 @@ import {
     MyProfileScreen,
     NewPostScreen,
 } from '@screens/index';
+
+import {AppTabBar} from './AppTabBar';
 
 export type AppTabNavigatorParamList = {
     HomeScreen: undefined;

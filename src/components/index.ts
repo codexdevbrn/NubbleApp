@@ -10,4 +10,5 @@ export * from './Screen/Screen';
 export * from './Screen/components/ScreenContainer';
 export * from './Text/Text';
 export * from './TextInput/TextInput';
-export * from '../routes/AppTabBar';
+export * from './Post/PostImage';
+export * from './Post/PostHeader';
