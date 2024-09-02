@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, ImageProps} from 'react-native';
+import {Dimensions, Image, ImageProps} from 'react-native';
 
 import {Box, BoxProps, Text} from '@components/index';
 
@@ -12,8 +12,8 @@ export function PostHeader({imageURL, author}: PostHeaderProps) {
     return (
         <Box {...$boxWrapper}>
             <Image {...$imageProps} source={{uri: imageURL}} />
-            <Box paddingLeft="s8">
-                <Text preset="paragraphCaption">{author}</Text>
+            <Box paddingLeft="s12">
+                <Text preset="paragraphMedium">{author}</Text>
             </Box>
         </Box>
     );
@@ -23,14 +23,14 @@ const $boxWrapper: BoxProps = {
     flexDirection: 'row',
     alignItems: 'center',
     mb: 's16',
-    width: 100,
+    width: Dimensions.get('screen').width,
 };
 const $imageProps: ImageProps = {
     style: {
         borderRadius: 50,
-        width: 30,
-        height: 30,
-        marginLeft: 10,
+        width: 32,
+        height: 32,
+        marginLeft: 24,
     },
     source: 0,
 };

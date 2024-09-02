@@ -12,3 +12,5 @@ export * from './Text/Text';
 export * from './TextInput/TextInput';
 export * from './Post/PostImage';
 export * from './Post/PostHeader';
+export * from './Post/PostActions';
+export * from './Post/PostBottom';
