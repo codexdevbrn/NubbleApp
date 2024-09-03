@@ -23,6 +23,7 @@ const $boxWrapper: BoxProps = {
     flexDirection: 'row',
     alignItems: 'center',
     mb: 's16',
+    ml: 's24',
     width: Dimensions.get('screen').width,
 };
 const $imageProps: ImageProps = {
@@ -30,7 +31,6 @@ const $imageProps: ImageProps = {
         borderRadius: 14,
         width: 32,
         height: 32,
-        marginLeft: 24,
     },
     source: 0,
 };

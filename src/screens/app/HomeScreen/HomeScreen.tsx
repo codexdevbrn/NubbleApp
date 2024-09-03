@@ -16,7 +16,7 @@ export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
     }
 
     return (
-        <Screen flatList>
+        <Screen resetPadding>
             <FlatList
                 showsVerticalScrollIndicator={false}
                 data={postList}

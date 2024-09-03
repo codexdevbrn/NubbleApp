@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Box, Text} from '@components/index';
+import {Box, BoxProps, Text} from '@components/index';
 
 interface PostBottomProps {
     userName: string;
@@ -10,11 +10,7 @@ interface PostBottomProps {
 
 export function PostBottom({userName, text, comment = false}: PostBottomProps) {
     return (
-        <Box
-            flexDirection="column"
-            justifyContent="flex-start"
-            ml="s28"
-            mt="s16">
+        <Box {...$boxWrapperProps}>
             <Text preset="paragraphMedium" bold>
                 {userName}
             </Text>
@@ -30,3 +26,10 @@ export function PostBottom({userName, text, comment = false}: PostBottomProps) {
         </Box>
     );
 }
+
+const $boxWrapperProps: BoxProps = {
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    mt: 's16',
+    ml: 's24',
+};

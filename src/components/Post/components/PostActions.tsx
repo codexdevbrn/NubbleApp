@@ -13,6 +13,22 @@ export function PostActions({
     commentCount,
     favoriteCount,
 }: PostActionsProps) {
+    return (
+        <Box {...$boxActionProps}>
+            <PostActionsItem
+                commentCount={commentCount}
+                reactionCount={reactionCount}
+                favoriteCount={favoriteCount}
+            />
+        </Box>
+    );
+}
+
+function PostActionsItem({
+    reactionCount,
+    commentCount,
+    favoriteCount,
+}: PostActionsProps) {
     const [isHeartFocused, setIsHeartFocused] = useState(false);
     const [isFavoriteFocused, setIsFavoriteFocused] = useState(false);
     const [thisReactionCount, setThisReactionCount] = useState(reactionCount);
@@ -30,10 +46,9 @@ export function PostActions({
             favoriteCount >= prevReaction ? prevReaction + 1 : prevReaction - 1,
         );
     }
-
     return (
-        <Box {...$boxWrapper}>
-            <Box flexDirection="row" alignItems="center">
+        <>
+            <Box {...$boxProps}>
                 <Icon
                     onPress={handleSubmitHeart}
                     name={isHeartFocused ? 'heartFill' : 'heart'}
@@ -59,15 +74,19 @@ export function PostActions({
                     {thisFavoriteCount > 0 && thisFavoriteCount}
                 </Text>
             </Box>
-        </Box>
+        </>
     );
 }
 
-const $boxWrapper: BoxProps = {
+const $boxActionProps: BoxProps = {
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    ml: 's28',
     mt: 's16',
+};
+const $boxProps: BoxProps = {
+    flexDirection: 'row',
+    alignItems: 'center',
+    ml: 's24',
 };
 
 const $itemBoxProps: BoxProps = {

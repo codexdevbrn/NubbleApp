@@ -11,41 +11,37 @@ import {
     ViewContainer,
     TouchableOpacityBoxProps,
 } from '@components/index';
-import {useAppSafeArea, useAppTheme} from '@hooks/index';
+import {useAppTheme} from '@hooks/index';
 import {useNavigation} from '@react-navigation/native';
 
-interface ScreenProps {
+interface ScreenProps extends BoxProps {
     children: React.ReactNode;
     canGoBack?: boolean;
     scrollable?: boolean;
     flatList?: boolean;
+    resetPadding?: boolean;
 }
 
 export function Screen({
     children,
     canGoBack = false,
     scrollable = false,
-    flatList = false,
+    resetPadding,
+    ...boxProps
 }: ScreenProps) {
     const {colors} = useAppTheme();
-    const {top, bottom} = useAppSafeArea();
     const {goBack} = useNavigation();
 
     const Container = scrollable ? ScrollViewContainer : ViewContainer;
 
-    const $boxWrapper: BoxProps = {
-        pb: 's24',
-        paddingHorizontal: flatList ? 's0' : 's24',
-    };
+    const styleProps = resetPadding ? $resetScreenProps : $viewScreenProps;
 
     return (
         <KeyboardAvoidingView
             style={{flex: 1}}
             behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
             <Container backgroundColor={colors.background}>
-                <Box
-                    {...$boxWrapper}
-                    style={{paddingTop: top, paddingBottom: bottom}}>
+                <Box {...styleProps} {...boxProps}>
                     {canGoBack && (
                         <Box>
                             <TouchableOpacityBox
@@ -68,4 +64,20 @@ export function Screen({
 const $touchableOpacityStyle: TouchableOpacityBoxProps = {
     mb: 's24',
     flexDirection: 'row',
+};
+
+const $viewScreenProps: BoxProps = {
+    paddingHorizontal: 's24',
+    style: {
+        paddingTop: 20,
+        paddingBottom: 20,
+    },
+};
+
+const $resetScreenProps: BoxProps = {
+    paddingHorizontal: 's0',
+    style: {
+        paddingTop: 0,
+        paddingBottom: 0,
+    },
 };
