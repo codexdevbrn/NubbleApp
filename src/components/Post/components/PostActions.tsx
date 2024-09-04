@@ -40,6 +40,7 @@ function PostActionsItem({
             reactionCount >= prevReaction ? prevReaction + 1 : prevReaction - 1,
         );
     }
+
     function handleSubmitFavorite() {
         setIsFavoriteFocused(isFavoriteFocused ? false : true);
         setThisFavoriteCount(prevReaction =>
@@ -49,30 +50,41 @@ function PostActionsItem({
     return (
         <>
             <Box {...$boxProps}>
-                <Icon
-                    onPress={handleSubmitHeart}
-                    name={isHeartFocused ? 'heartFill' : 'heart'}
-                    color={isHeartFocused ? 'error' : 'backgroundContrast'}
-                />
-                <Text bold {...$textStyleProps}>
-                    {thisReactionCount > 0 && thisReactionCount}
-                </Text>
-            </Box>
-            <Box {...$itemBoxProps}>
-                <Icon name="comment" color="backgroundContrast" />
-                <Text bold {...$textStyleProps}>
-                    {commentCount > 0 && commentCount}
-                </Text>
-            </Box>
-            <Box {...$itemBoxProps}>
-                <Icon
-                    onPress={handleSubmitFavorite}
-                    name={isFavoriteFocused ? 'bookMarkFill' : 'bookMark'}
-                    color={isFavoriteFocused ? 'primary' : 'backgroundContrast'}
-                />
-                <Text bold {...$textStyleProps}>
-                    {thisFavoriteCount > 0 && thisFavoriteCount}
-                </Text>
+                <Box {...$itemBoxProps}>
+                    <Icon
+                        onPress={handleSubmitHeart}
+                        hitSlop={2}
+                        name={isHeartFocused ? 'heartFill' : 'heart'}
+                        color={isHeartFocused ? 'error' : 'backgroundContrast'}
+                    />
+                    <Text bold {...$textStyleProps}>
+                        {thisReactionCount > 0 && thisReactionCount}
+                    </Text>
+                </Box>
+                <Box {...$itemBoxProps}>
+                    <Icon
+                        onPress={handleSubmitHeart}
+                        hitSlop={2}
+                        name="comment"
+                        color="backgroundContrast"
+                    />
+                    <Text bold {...$textStyleProps}>
+                        {commentCount > 0 && commentCount}
+                    </Text>
+                </Box>
+                <Box {...$itemBoxProps}>
+                    <Icon
+                        onPress={handleSubmitFavorite}
+                        hitSlop={2}
+                        name={isFavoriteFocused ? 'bookMarkFill' : 'bookMark'}
+                        color={
+                            isFavoriteFocused ? 'primary' : 'backgroundContrast'
+                        }
+                    />
+                    <Text bold {...$textStyleProps}>
+                        {thisFavoriteCount > 0 && thisFavoriteCount}
+                    </Text>
+                </Box>
             </Box>
         </>
     );
@@ -86,13 +98,13 @@ const $boxActionProps: BoxProps = {
 const $boxProps: BoxProps = {
     flexDirection: 'row',
     alignItems: 'center',
-    ml: 's24',
+    paddingHorizontal: 's24',
 };
 
 const $itemBoxProps: BoxProps = {
     flexDirection: 'row',
     alignItems: 'center',
-    ml: 's24',
+    marginRight: 's20',
 };
 
 const $textStyleProps: TextProps = {

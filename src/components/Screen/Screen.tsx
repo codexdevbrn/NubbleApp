@@ -11,7 +11,7 @@ import {
     ViewContainer,
     TouchableOpacityBoxProps,
 } from '@components/index';
-import {useAppTheme} from '@hooks/index';
+import {useAppSafeArea, useAppTheme} from '@hooks/index';
 import {useNavigation} from '@react-navigation/native';
 
 interface ScreenProps extends BoxProps {
@@ -31,8 +31,25 @@ export function Screen({
 }: ScreenProps) {
     const {colors} = useAppTheme();
     const {goBack} = useNavigation();
+    const {top, bottom} = useAppSafeArea();
 
     const Container = scrollable ? ScrollViewContainer : ViewContainer;
+
+    const $viewScreenProps: BoxProps = {
+        paddingHorizontal: 's24',
+        style: {
+            paddingTop: top,
+            paddingBottom: bottom,
+        },
+    };
+
+    const $resetScreenProps: BoxProps = {
+        paddingHorizontal: 's0',
+        style: {
+            paddingTop: 0,
+            paddingBottom: 0,
+        },
+    };
 
     const styleProps = resetPadding ? $resetScreenProps : $viewScreenProps;
 
@@ -64,20 +81,4 @@ export function Screen({
 const $touchableOpacityStyle: TouchableOpacityBoxProps = {
     mb: 's24',
     flexDirection: 'row',
-};
-
-const $viewScreenProps: BoxProps = {
-    paddingHorizontal: 's24',
-    style: {
-        paddingTop: 20,
-        paddingBottom: 20,
-    },
-};
-
-const $resetScreenProps: BoxProps = {
-    paddingHorizontal: 's0',
-    style: {
-        paddingTop: 0,
-        paddingBottom: 0,
-    },
 };

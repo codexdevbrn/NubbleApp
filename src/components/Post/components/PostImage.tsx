@@ -13,6 +13,7 @@ export function PostImage({imageURL}: PostImageProps) {
 
 const $imageProps: ImageProps = {
     style: {
+        paddingHorizontal: 0,
         width: Dimensions.get('screen').width,
         height: 260,
     },

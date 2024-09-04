@@ -47,6 +47,7 @@ export interface IconProps {
     color?: ThemeColors;
     size?: number;
     onPress?: () => void;
+    hitSlop?: number;
 }
 
 export function Icon({
@@ -54,13 +55,14 @@ export function Icon({
     color = 'backgroundContrast',
     size,
     onPress,
+    hitSlop = 10,
 }: IconProps) {
     const {colors} = useAppTheme();
     const SVGIcon = iconRegistry[name];
 
     if (onPress) {
         return (
-            <Pressable hitSlop={10} onPress={onPress}>
+            <Pressable hitSlop={hitSlop} onPress={onPress}>
                 <SVGIcon color={colors[color]} size={size} />
             </Pressable>
         );
