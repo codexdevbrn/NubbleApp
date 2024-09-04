@@ -8,6 +8,7 @@ export * from './auth/SuccessScreen/SuccessScreen';
 export * from './auth/SuccessScreen/SuccessScreenPresets';
 
 export * from './app/HomeScreen/HomeScreen';
+export * from './app/HomeScreen/components/HomeHeader';
 export * from './app/SettingsScreen/SettingsScreen';
 export * from './app/NewPostScreen/NewPostScreen';
 export * from './app/FavoritesScreen/FavoritesScreen';

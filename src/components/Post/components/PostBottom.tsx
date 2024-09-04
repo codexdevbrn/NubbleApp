@@ -31,5 +31,5 @@ const $boxWrapperProps: BoxProps = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     mt: 's16',
-    ml: 's24',
+    paddingHorizontal: 's24',
 };
