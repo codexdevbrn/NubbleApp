@@ -6,11 +6,11 @@ import {Post, postService} from '@domain/index';
 import {AppTabScreenProps} from '@routes/index';
 import {HomeHeader} from '@screens/index';
 
-export function HomeScreen({navigation}: AppTabScreenProps<'HomeScreen'>) {
+export function HomeScreen({}: AppTabScreenProps<'HomeScreen'>) {
     const [postList, setPostList] = useState<Post[]>([]);
     useEffect(() => {
         postService.getList().then(list => setPostList(list));
-    });
+    }, []);
 
     function renderItem({item}: ListRenderItemInfo<Post>) {
         return <PostItem item={item} />;
