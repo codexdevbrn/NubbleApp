@@ -18,6 +18,11 @@
 # Dependências de desenvolvimento
 
 - [Husky](https://typicode.github.io/husky/)
+- [react-native-dotenv](https://www.npmjs.com/package/react-native-dotenv)
+
+- [nubble-app-api](https://github.com/LucasGarcez/nubble-app-api)
+
+<p>Atualmente o projeto está utilizando a branch <i>backend-v1</i> da API</p>
 
 ## Plugins
 
@@ -31,6 +36,7 @@
 <p>• Yarn ou NPM</p>
 <p>• Android Studio ou XCode</p>
 <p>• Editor de texto - Vscode ou outro de sua preferência</p>
+
 
 ```bash
 # Clone o repositório
@@ -47,5 +53,20 @@ $ yarn / npm install
 ```bash
 # Inicie o projeto
 $ yarn start / npm start
+```
+
+### Configurando o .env no typescript
+
+<span>Será necessário criar o aquivo .env seguindo as diretrizes no env.d.ts. Nele você terá que configurar conforme seus dados respectivamente.</span>
+
+[.env no typescript](https://dev.to/bhatvikrant/how-to-add-environment-variables-in-a-react-native-project-with-ts-2ne5)
+
+<span>Em alguns casos, após finalizar a configuração do .env, seu projeto pode retornar as variáveis como <i>undefined</i>, caso isso ocorra, tente reiniciar o Metro Bundler </span>
+
+```bash
+#Reinicie o metro Bundler
+
+$ npx react-native start --reset-cache
+
 ```
 
