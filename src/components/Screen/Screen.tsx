@@ -45,6 +45,7 @@ export function Screen({
 
     const $resetScreenProps: BoxProps = {
         paddingHorizontal: 's0',
+        flex: 1,
         style: {
             paddingTop: 0,
             paddingBottom: 0,
