@@ -1,5 +1,10 @@
-import React from 'react';
-import {FlatList, ListRenderItemInfo, RefreshControl} from 'react-native';
+import React, {memo} from 'react';
+import {
+    FlatList,
+    ListRenderItemInfo,
+    RefreshControl,
+    ViewStyle,
+} from 'react-native';
 
 import {Screen, PostItem} from '@components/index';
 import {Post, usePostList} from '@domain/index';
@@ -13,9 +18,15 @@ export function HomeScreen({}: AppTabScreenProps<'HomeScreen'>) {
     const flatListRef = React.useRef<FlatList<Post>>(null);
     useScrollToTop(flatListRef);
 
-    function renderItem({item}: ListRenderItemInfo<Post>) {
+    const ListItem = memo(({item}: Omit<ListRenderItemInfo<Post>, "index" | "separators">) => {
         return <PostItem item={item} />;
-    }
+    });
+
+    const renderItem = ({item}: ListRenderItemInfo<Post>) => <ListItem item={item} />;
+
+    const $flexProps: ViewStyle = {
+        flex: postList.length === 0 ? 1 : undefined,
+    };
 
     return (
         <Screen resetPadding>
@@ -31,9 +42,7 @@ export function HomeScreen({}: AppTabScreenProps<'HomeScreen'>) {
                 refreshControl={
                     <RefreshControl refreshing={loading} onRefresh={refresh} />
                 }
-                contentContainerStyle={{
-                    flex: postList.length === 0 ? 1 : undefined,
-                }}
+                contentContainerStyle={$flexProps}
                 ListHeaderComponent={<HomeHeader />}
                 ListEmptyComponent={
                     <HomeEmpty loading={loading} er={error} refetch={refresh} />
